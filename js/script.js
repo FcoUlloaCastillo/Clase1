@@ -26,7 +26,7 @@ let comentario = document.getElementById("comentario").value.trim();
 
 
 if(!validarRun(run)){
-    alert("Debe ingresar un RUN");
+    alert("El RUN debe tener al menos 8 caracteres");
     return false;
 }
 
@@ -63,7 +63,7 @@ return true;
 
 function validarRun(run){
 
-if(run === ""){
+if(run.length < 8){
     return false;
 }
 
