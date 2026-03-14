@@ -110,7 +110,13 @@ return true;
 
 function validarComentario(comentario){
 
+if(comentario === ""){
+    alert("Debe ingresar un comentario");
+    return false;
+}
+
 if(comentario.length < 5){
+    alert("El comentario debe tener al menos 5 caracteres");
     return false;
 }
 
