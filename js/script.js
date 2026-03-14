@@ -3,10 +3,12 @@ document.getElementById("registroForm").addEventListener("submit", function(e){
 e.preventDefault();
 
 if(validarFormulario()){
-    
-    document.getElementById("mensaje").innerHTML = "Registro enviado correctamente";
-    this.reset();
 
+    alert("Registro guardado exitosamente");
+
+    document.getElementById("mensaje").innerHTML = "Registro guardado exitosamente";
+
+    this.reset();
 }
 
 });
@@ -23,9 +25,8 @@ let estado = document.getElementById("estado").value;
 let comentario = document.getElementById("comentario").value.trim();
 
 
-
 if(!validarRun(run)){
-    alert("Ingrese un RUN válido");
+    alert("Debe ingresar un RUN");
     return false;
 }
 
@@ -35,22 +36,22 @@ if(!validarNombre(nombre)){
 }
 
 if(!validarFecha(fecha)){
-    alert("Debe seleccionar una fecha válida");
+    alert("Debe ingresar la fecha de nacimiento");
     return false;
 }
 
-if(!validarSelect(sexo)){
-    alert("Seleccione el sexo");
+if(!validarSexo(sexo)){
+    alert("Debe seleccionar el sexo");
     return false;
 }
 
-if(!validarSelect(estado)){
-    alert("Seleccione el estado civil");
+if(!validarEstadoCivil(estado)){
+    alert("Debe seleccionar el estado civil");
     return false;
 }
 
 if(!validarComentario(comentario)){
-    alert("El comentario debe tener mínimo 5 caracteres");
+    alert("El comentario debe tener al menos 5 caracteres");
     return false;
 }
 
@@ -62,7 +63,7 @@ return true;
 
 function validarRun(run){
 
-if(run.length < 8){
+if(run === ""){
     return false;
 }
 
@@ -96,9 +97,21 @@ return true;
 
 
 
-function validarSelect(valor){
+function validarSexo(sexo){
 
-if(valor === ""){
+if(sexo === ""){
+    return false;
+}
+
+return true;
+
+}
+
+
+
+function validarEstadoCivil(estado){
+
+if(estado === ""){
     return false;
 }
 
@@ -110,13 +123,7 @@ return true;
 
 function validarComentario(comentario){
 
-if(comentario === ""){
-    alert("Debe ingresar un comentario");
-    return false;
-}
-
 if(comentario.length < 5){
-    alert("El comentario debe tener al menos 5 caracteres");
     return false;
 }
 
