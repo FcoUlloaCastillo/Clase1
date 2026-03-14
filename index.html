@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Galería y Registro</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Galería de Imágenes</h1>
+</header>
+
+<section class="galeria">
+
+    <div class="imagen">
+        <img src="img/img1.jpg" alt="Imagen 1">
+    </div>
+
+    <div class="imagen">
+        <img src="img/img2.jpg" alt="Imagen 2">
+    </div>
+
+    <div class="imagen">
+        <img src="img/img3.jpg" alt="Imagen 3">
+    </div>
+
+    <div class="imagen">
+        <img src="img/img4.jpg" alt="Imagen 4">
+    </div>
+
+</section>
+
+
+<section class="formulario">
+
+<h2>Formulario de Registro</h2>
+
+<form id="registroForm">
+
+<label>RUN</label>
+<input type="text" name="run" required>
+
+<label>Nombre</label>
+<input type="text" name="nombre" required>
+
+<label>Fecha de Nacimiento</label>
+<input type="date" name="fecha" required>
+
+<label>Sexo</label>
+<select name="sexo">
+<option>Masculino</option>
+<option>Femenino</option>
+<option>Otro</option>
+</select>
+
+<label>Estado Civil</label>
+<select name="estado">
+<option>Soltero</option>
+<option>Casado</option>
+<option>Divorciado</option>
+<option>Viudo</option>
+</select>
+
+<label>Comentario</label>
+<textarea name="comentario"></textarea>
+
+<button type="submit">Registrar</button>
+
+</form>
+
+<p id="mensaje"></p>
+
+</section>
+
+
+<footer>
+<p>Galería y Registro - Ejemplo HTML</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
