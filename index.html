@@ -40,23 +40,25 @@
 <form id="registroForm">
 
 <label>RUN</label>
-<input type="text" name="run" required>
+<input type="text" id="run" required>
 
 <label>Nombre</label>
-<input type="text" name="nombre" required>
+<input type="text" id="nombre" required>
 
 <label>Fecha de Nacimiento</label>
-<input type="date" name="fecha" required>
+<input type="date" id="fecha" required>
 
 <label>Sexo</label>
-<select name="sexo">
+<select id="sexo">
+<option value="">Seleccione</option>
 <option>Masculino</option>
 <option>Femenino</option>
 <option>Otro</option>
 </select>
 
 <label>Estado Civil</label>
-<select name="estado">
+<select id="estado">
+<option value="">Seleccione</option>
 <option>Soltero</option>
 <option>Casado</option>
 <option>Divorciado</option>
@@ -64,7 +66,7 @@
 </select>
 
 <label>Comentario</label>
-<textarea name="comentario"></textarea>
+<textarea id="comentario"></textarea>
 
 <button type="submit">Registrar</button>
 
